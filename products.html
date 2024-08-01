@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    header {
+        background: #00502d;
+        color: white;
+        padding: 10px 0;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    
+    .navbar .logo {
+        width: 50px;
+    }
+    
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 0 10px;
+    }
+    
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .search-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .search-container input {
+        padding: 5px;
+        margin-right: 5px;
+    }
+    
+    .search-container button {
+        padding: 5px 10px;
+        background: #555;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .main-content {
+        text-align: center;
+    }
+    
+    .banner {
+        position: relative;
+    }
+    
+    .banner-image {
+        width: 100%;
+        height: auto;
+    }
+    
+    .banner-text {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        color: black;
+        text-align: center;
+    }
+    
+    .products {
+        display: flex;
+        justify-content: space-around;
+        padding: 100px;
+    }
+    
+    .product-category {
+        position: relative;
+        width: 30%;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    .product-category img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    }
+    
+    .product-category .watermark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(245, 240, 240, 0.0);
+        color: #dde1bf
+        ;
+        padding: 5px;
+        border-radius: 3px;
+        font-size: 3.5em;
+        text-align: center;
+        font-weight: bolder;
+    }
+    
+    h2 {
+        color: #054307;
+    
+        font-size: 90px;
+        font-family:'Brush Script MT';
+    }
+    
+    h1 {
+        color: #054307;
+    
+        font-size: 80px;
+        font-family:'Copperplate';
+        text-align: 10px;
+        text-shadow: 2px 2px #054307; ;
+    }
+    .trending-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+    }
+    
+    .trending-item {
+        width: 30%;
+        margin: 10px;
+    }
+    
+    .trending-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="banner">
+            <img src="image11.png" alt="Banner">
+            <div class="banner-text">
+                <h1>Our Products</h1>
+            </div>
+        </div>
+        <div class="products">
+            <div class="product-category">
+                <img src="image1.png" alt="Body Care">
+                <div class="watermark">Body Care</div>
+            </div>
+            <div class="product-category">
+                <img src="image9.jpg" alt="Bags">
+                <div class="watermark">Bags</div>
+            </div>
+            <div class="product-category">
+                <img src="image10.jpg" alt="Travel Kit">
+                <div class="watermark">Travel Kit</div>
+            </div>
+        </div>
+        <h2>Top Trending</h2>
+        <div class="trending-items">
+            <div class="trending-item">
+                <img src="image8.png" alt="Trending Item 1">
+            </div>
+            <div class="trending-item">
+                <img src="image7.png" alt="Trending Item 2">
+            </div>
+            <div class="trending-item">
+                <img src="image6.png" alt="Trending Item 3">
+            </div>
+            <div class="trending-item">
+                <img src="image5.png" alt="Trending Item 4">
+            </div>
+            <div class="trending-item">
+                <img src="image4.png" alt="Trending Item 5">
+            </div>
+            <div class="trending-item">
+                <img src="image3.png" alt="Trending Item 6">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
