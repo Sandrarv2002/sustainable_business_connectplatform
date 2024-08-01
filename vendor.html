@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Business Connect - Register</title>
+    <style> 
+        body {
+            margin: 0;
+            font-family: Inter, sans-serif;
+            background-color: rgba(0, 0, 0, 1);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            overflow-y: auto;
+        }
+
+        .div {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1000px;
+            padding-bottom: 80px;
+        }
+
+        .div-3 {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            max-width: 800px;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 129%;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+        .div-4 {
+            font: 24px/120% Inter, sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .div-5, .div-7, .div-9, .div-11, .div-13, .div-16 {
+            font: 18px/120% Inter, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .div-6, .div-8, .div-10, .div-12, .div-14, .div-19, .div-22 {
+            width: 100%;
+            padding: 10px;
+            font: 16px/120% Inter, sans-serif;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .div-14 {
+            height: 100px;
+        }
+
+        .div-15 {
+            font: 14px/120% Inter, sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .div-17, .div-20 {
+            margin-bottom: 20px;
+        }
+
+        .div-18, .div-21 {
+            font: 16px/120% Inter, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .div-23 {
+            background-color:#00502D;
+            color: #fff;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font: 18px/120% Inter, sans-serif;
+            text-align: center;
+            width: 100%;
+        }
+
+        .div-23:hover {
+            background-color:#00502D;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+        }
+        header {
+    width: 100%; /* Change to 100% to span the full width of the page */
+    padding: 100px;
+    background-color: #000000;
+    text-align: center;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    margin: 0; /* Reset margin to ensure full width */
+}
+h1{
+    color: #56cf63;
+}
+
+    </style>
+</head>
+<body>
+    <div class="div">
+        <header>
+        <h1>SUSTAINABLE BUSINESS CONNECT</h1>
+       </header>
+        <div class="div-3">
+            <div class="div-4">Enter your information here!!</div>
+            <form>
+                <div class="div-5">NAME</div>
+                <input class="div-6" type="text" name="name" required>
+
+                <div class="div-7">NAME OF YOUR BUSINESS</div>
+                <input class="div-8" type="text" name="business_name" required>
+
+                <div class="div-9">ENTER THE LOCATION OF YOUR BUSINESS</div>
+                <input class="div-10" type="text" name="business_location" required>
+
+                <div class="div-11">ENTER YOUR PRODUCT NAME</div>
+                <input class="div-12" type="text" name="product_name" required>
+
+                <div class="div-13">ENTER PRODUCT DETAILS</div>
+                <textarea class="div-14" name="product_details" required></textarea>
+                <div class="div-15">(Include price detail, product description)</div>
+
+                <div class="div-16">ENTER YOUR CONTACT DETAILS :</div>
+                <div class="div-17">
+                    <div class="div-18">EMAIL ID :</div>
+                    <input class="div-19" type="email" name="email" required>
+                </div>
+                <div class="div-20">
+                    <div class="div-21">PHONE NUMBER :</div>
+                    <input class="div-22" type="tel" name="phone_number" required>
+                </div>
+                <button class="div-23" type="submit" onclick="button3()">REGISTER</button>
+            </form>
+        </div>
+    </div>
+    <script> 
+       function button3(){
+            window.location.href = "registered.html"
+        }
+     // Get the register button
+     const registerButton = document.querySelector('.div-23');
+
+// Add an event listener to the register button
+    registerButton.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // Get the form data
+    const formData = new FormData(document.querySelector('form'));
+
+    // Create an object to store the form data
+    const data = {};
+
+    // Loop through the form data and add it to the object
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    // Validate the form data
+    if (validateFormData(data)) {
+        // Send the form data to the server
+        sendFormData(data);
+    } else {
+        // Display an error message
+        displayErrorMessage('Please fill out all required fields.');
+    }
+});
+
+// Validate the form data
+function validateFormData(data) {
+    // Check if all required fields are filled out
+    if (!data.name || !data.business_name || !data.business_location || !data.product_name || !data.product_details || !data.email || !data.phone_number) {
+        return false;
+    }
+
+    // Check if email is valid
+    if (!validateEmail(data.email)) {
+        return false;
+    }
+
+    // Check if phone number is valid
+    if (!validatePhoneNumber(data.phone_number)) {
+        return false;
+    }
+
+    return true;
+}
+
+// Validate email
+function validateEmail(email) {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+}
+
+// Validate phone number
+function validatePhoneNumber(phoneNumber) {
+    const phoneNumberRegex = /^\d{3}-\d{3}-\d{4}$/;
+    return phoneNumberRegex.test(phoneNumber);
+}
+
+// Send the form data to the server
+function sendFormData(data) {
+    // Create a new XMLHttpRequest object
+    const xhr = new XMLHttpRequest();
+
+    // Set the request method and URL
+    xhr.open('POST', '/register', true);
+
+    // Set the request headers
+    xhr.setRequestHeader('Content-Type', 'application/json');
+
+    // Send the request
+    xhr.send(JSON.stringify(data));
+
+    // Handle the response
+    xhr.onload = () => {
+        if (xhr.status === 200) {
+            // Display a success message
+            displaySuccessMessage('Registration successful!');
+        } else {
+            // Display an error message
+            displayErrorMessage('Error registering.');
+        }
+    };
+
+    // Handle errors
+    xhr.onerror = () => {
+        // Display an error message
+        displayErrorMessage('Error registering.');
+    };
+}
+
+// Display a success message
+function displaySuccessMessage(message) {
+    alert(message);
+}
+
+// Display an error message
+function displayErrorMessage(message) {
+    alert(message);
+}
+    </script>
+</body>
+</html>
