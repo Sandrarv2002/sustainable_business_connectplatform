@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Business Connect</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1d1d1d;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1d1d1d;
+}
+
+.logo img {
+    height: 200px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+   display:inline;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.main-content {
+    text-align: center;
+    margin: 50px 0;
+}
+
+h1 {
+    color: #52b788;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.registration-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.option {
+    margin-bottom: 20px;
+}
+
+.register-btn {
+    background-color: #52b788;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: #408b60;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="sbclogo-removebg-preview.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+        
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main-content">
+            <h1>SUSTAINABLE BUSINESS CONNECT</h1>
+            <p>Promote Your Sustainable Products Here!!!</p>
+            <div class="registration-options">
+                <div class="option">
+                    <h2>Are you here to register business??</h2>
+                    <button class="register-btn" onclick="registerBusiness()">Register</button>
+                </div>
+                <div class="option">
+                    <h2>Are you a customer??</h2>
+                    <button class="register-btn" onclick="registerCustomer()">Register</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function registerBusiness() {
+            window.location.href="vendor.html"
+    }
+
+function registerCustomer() {
+    window.location.href ="customerinfo.html"
+}
+
+    </script>
+</body>
+</html>
