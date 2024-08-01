@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Business Connect</title>
+   <style> 
+    * {
+    margin: 0;
+    
+    border: border-box;
+    
+
+}
+.nav
+{
+    height: 40px;
+
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    color: rgb(179, 149, 149);
+    justify-content: space-evenly;
+    align-items:center;
+    
+    
+}
+
+.container{
+    
+    align-items: center;
+    display: inline;
+    justify-content: center;
+    background-color: #00502D;
+}
+.logo{
+    background-size: contain;
+    justify-self: center;
+    padding-left: 500px;
+    background-color:#00502D;
+    
+}
+
+.intro
+{
+    background-color: rgb(0, 0, 0);
+    padding-top: 80px;
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+    
+    
+    
+}
+
+a{
+    text-decoration: none;
+    color: azure;
+}
+
+
+.foot-panel
+{
+    
+    background-color:rgb(0, 0, 0);
+    padding-top: 100px;
+    border-top: #00502D;
+    border-top-width: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    color: rgb(253, 253, 253);
+    
+}
+
+.foot-panel2{
+    border-top: 2px solid rgb(255, 255, 255);
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    text-align: right;
+    
+}
+
+.foot-panel2 p{
+    font-size: medium;
+}
+.selection{
+    padding-top: 40px;
+    padding-left: 70px;
+    text-align: center;
+    background-color: black;
+    color: beige;
+    padding-bottom: 50px;
+    border-bottom: 2px solid rgb(215, 202, 202);
+}
+
+p {
+    padding-top: 30px;
+    font-size: 24px;
+    font-family:cursive;
+}
+
+h1{
+    color: #56cf63;
+    font-size: 50px
+}
+
+h3{
+    padding-top: 20px;
+    font-size: 35px;
+}
+
+.button{
+    background-color: #00502D;
+    margin-top: 10px;
+    color: #ffffff;
+    border-radius: 4px;
+    height:30px;
+    width: 100px;
+}
+.button:hover{
+    background-color: #56cf63;
+}
+
+a:hover
+{
+    background-color: rgb(73, 207, 131);
+}
+   </style>
+</head>
+<body>
+    <div class="nav">
+        <a href = "index.html">HOME</a> 
+        <a href = "about.html">ABOUT</a> 
+        <a href = "products.html">PRODUCTS</a> 
+           
+    </div>
+    <div class="container">
+        <div class="logo">
+              <img src="logo.jpeg">
+        </div>
+        <div class="intro">
+               <h1>SUSTAINABLE BUSINESS CONNECT</h1>
+               <h3> PROMOTE YOUR SUSTAINABLE PRODUCTS HERE!</h3>
+               <p>
+                
+
+Welcome to the Sustainable Business Connect Platform, your go-to marketplace for eco-friendly products and services. In a world where sustainability is more important than ever, our platform bridges the gap between environmentally conscious consumers and the businesses that serve them. Here, you'll find a diverse range of sustainable products, from energy-efficient gadgets to ethically produced fashion, all in one user-friendly space.
+
+<br>Our goal is to empower businesses that prioritize sustainability, helping them reach a broader audience while making it easier for consumers to discover and support eco-friendly options. By facilitating these connections, we aim to foster a thriving green economy and encourage responsible consumption.
+
+<br>Explore our platform to learn more about our mission, discover unique sustainable products, and join a community committed to making a positive environmental impact. Together, we can drive change and create a more sustainable future for all.
+               </p>
+               <h3>TO VIEW OUR PRODUCTS AND PROMOTE YOUR BUSINESS</h4>
+        </div>
+        <div class="selection">
+            <p>Are you Already an User?</p> 
+           <button class = button onclick="button1()">Sign in</button>
+           <p>Are you New here?</p> 
+           <button class = button onclick="button2()">Register</button>
+        </div>
+    </div>
+</body>
+<script>
+    function button1(){
+    window.location.href = "signin.html"
+}
+
+function button2(){
+ window.location.href = "signin.html"
+}
+</script>
+<footer>
+     <div class="foot-panel">
+        <div class="logo1">
+            <img src="logo_bc.jpeg" height="200px">
+        </div>
+        <div class="insta">
+          <p>STAY CONNECTED</p>
+        </div>
+        <div class="contact">
+            <p>Contact us:</p>
+            
+            <p><a href="mailto:Email: support@sustainablebusinessconnect.com">Email: support@sustainablebusinessconnect.com</a></p>
+            <p>Phone: +1-234-567-890</p>
+            <p>Address: 123 Green Lane, Eco City, Planet Earth</p>
+
+        </div>
+        <div class="support">
+            <p>Customer Support</p>
+            <p>FAQ</p>
+            <p> Shipping & Returns</p>
+            <p>Terms of Service</p>
+            <p>Privacy Policy</p>
+            <p>Help Center</p>
+        </div>
+        
+     </div>
+     <div class="foot-panel2">
+        <p>
+            © 2024 Sustainable Business Connect Platform. All rights reserved.
+        </p>
+     </div>
+</footer>
+</html>
